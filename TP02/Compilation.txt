@@ -1,0 +1,25 @@
+Commande pour compiler : 
+
+
+Se placer dans le répertoire Implémentation
+
+
+Pour compiler Decorator_Codeur.java:
+
+Decorator_Codeur : javac -d cls -cp misc/ -sourcepath src src/Decorator_Codeur.java
+Test_Codeur: javac -d cls -cp misc/ -sourcepath src src/Test_Codeur.java
+
+Pour éxecuter :
+
+java -cp "cls;misc" Test_Codeur
+
+
+
+Pour compiler MonAdaptateur.java :
+
+MonAdaptateur : javac -d cls -cp misc/ -sourcepath src src/MonAdaptateur.java
+testAdaptateur: javac -d cls -cp misc/ -sourcepath src src/testAdaptateur.java
+
+Pour exécuter
+
+java -cp "cls;misc" testAdaptateur
