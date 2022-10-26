@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "*.rmd": "markdown",
+        "ostream": "cpp",
+        "new": "cpp",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "time.h": "c"
+    }
+}
