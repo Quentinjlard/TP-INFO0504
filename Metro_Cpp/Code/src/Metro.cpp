@@ -11,6 +11,12 @@ Metro::Metro()
     //ctor
 }
 
+Metro::Metro(const Metro& other)
+{
+    arretsMetro = other.arretsMetro;
+    lignesMetro = other.lignesMetro;
+}
+
 Metro::~Metro()
 {
     // delete this;

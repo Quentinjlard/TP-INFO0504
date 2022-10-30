@@ -10,6 +10,7 @@ class Metro
 {
     public:
         Metro();
+        Metro(const Metro &other);
         virtual ~Metro();
         void importerDonnees(string wd); // charge l'ensemble des données (applique les fonctions importerTousStopTxt et importerToutesLignesTxt)
         Arret* getArret(int idArret); // récupère un objet Arret à partir d'un identifiant de type int

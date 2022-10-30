@@ -33,7 +33,8 @@ Ligne::~Ligne()
 {
     delete this;
 }
- void Ligne::setArretsLigne(Arret* arret){
+
+void Ligne::setArretsLigne(Arret* arret){
     arretsLigne.push_back(arret);
 }
 int Ligne::getIdLigne(){
