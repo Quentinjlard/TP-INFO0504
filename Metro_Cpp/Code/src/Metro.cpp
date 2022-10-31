@@ -11,16 +11,21 @@ Metro::Metro()
     //ctor
 }
 
-Metro::Metro(const Metro& other)
-{
-    arretsMetro = other.arretsMetro;
-    lignesMetro = other.lignesMetro;
-}
-
 Metro::~Metro()
 {
-    // delete this;
+    //Dtor
 }
+
+void Metro::destructMetro(){
+    for(int i = 0; i < (int)arretsMetro.size(); i++){
+        delete arretsMetro[i];
+    }
+
+    for(int i = 0; i < (int)lignesMetro.size(); i++){
+        delete lignesMetro[i];
+    }
+}
+
 
 void Metro::setArretsMetro(Arret* arret)
 {
@@ -50,7 +55,7 @@ void Metro::importerStopTxt(string path_fichier)
         getline(ligne_fichier, stop_lon_s, ',');
         stop_name.erase(remove(stop_name.begin(), stop_name.end(), '\"' ),stop_name.end());
         stop_desc.erase(remove(stop_desc.begin(), stop_desc.end(), '\"' ),stop_desc.end());
-        this->setArretsMetro(new Arret(stop_id_s, stop_name, stop_desc,
+        this->setArretsMetro( new Arret(stop_id_s, stop_name, stop_desc,
                                     stop_lat_s, stop_lon_s));
     }
     fichier.close();
@@ -173,13 +178,13 @@ void Metro::importerDonnees(string wd)
 
 Arret* Metro::getArret(int idArret)
 {
-    int i=0;
+    int i;
     for(i = 0; i < (int)arretsMetro.size(); ++i)
     {
         if(idArret == arretsMetro[i]->getIdArret())
             break;
     }
-    if(i >=(int)arretsMetro.size())
+    if(i >= (int)arretsMetro.size())
         throw runtime_error ("id non trouvé !");
 
     return(arretsMetro[i]);
@@ -193,8 +198,8 @@ Arret* Metro::getArret(string idArret)
 }
 Ligne* Metro::getLigne(int idLigne)
 {
-    int i=0;
-    for(i = 0; i < (int)arretsMetro.size(); ++i)
+    int i;
+    for(i=0; i < (int)arretsMetro.size(); ++i)
     {
         if(idLigne == lignesMetro[i]->getIdLigne())
             break;
@@ -216,3 +221,4 @@ vector<Ligne*> Metro::getLignesMetro()
 {
     return(lignesMetro);
 }
+

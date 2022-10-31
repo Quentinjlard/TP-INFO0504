@@ -4,6 +4,10 @@
         "*.rmd": "markdown",
         "ostream": "cpp",
         "new": "cpp",
-        "algorithm": "cpp"
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "string_view": "cpp",
+        "utility": "cpp",
+        "stdexcept": "cpp"
     }
 }

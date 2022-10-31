@@ -3,15 +3,13 @@
 #include <sstream>
 #include <climits>
 
-//#define INT_MAX 10000000 //La valeur que l'on donne à l'infini. Car en informatique, l'infini n'existe pas !
+// #define INT_MAX 10000000 //La valeur que l'on donne à l'infini. Car en informatique, l'infini n'existe pas !
 
 Node::Node(string id)
+        : previous(NULL), distanceFromStartCourtChemin(INT_MAX), distanceFromStartMinChangement(INT_MAX)
 {
     stringstream temp_id(id);
     temp_id >> idNode;
-    this->previous = NULL;
-    this->distanceFromStartCourtChemin = INT_MAX;
-    this->distanceFromStartMinChangement = INT_MAX;
 }
 Node::Node(int id)
 {
@@ -23,7 +21,7 @@ Node::Node(int id)
 
 Node::~Node()
 {
-    delete this;
+    //dtor
 }
 
 int Node::getIdNode(){

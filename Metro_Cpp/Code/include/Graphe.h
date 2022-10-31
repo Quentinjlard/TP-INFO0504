@@ -13,6 +13,7 @@ class Graphe
 {
     public:
         Graphe(string wd); // constructeur
+        void destructGraphe();
         Node* dijkstras(string entree, string sortie, bool minChangement); //algo du plus court chemin
     protected:
 

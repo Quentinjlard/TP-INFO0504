@@ -13,7 +13,7 @@ class Ligne
     public:
         Ligne(int idLigne, string numero_ligne, string nom_trajet, string couleur); // constructeur
         Ligne(string idLigne, string numero_ligne, string nom_trajet, string couleur); // constructeur
-        virtual ~Ligne();
+        void destructLigne();
         void setArretsLigne(Arret* arret); // agrémente arretsLigne
         int getIdLigne(); // recupere idLigne
         string getNumero(); // recupere numero

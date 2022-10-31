@@ -2,7 +2,7 @@
 CCompilerExec=g++
 
 # Default FLAGS for compilation
-CFLAGS= -g -Wall -ansi -pedantic
+CFLAGS= -Wall -ansi -pedantic
 #CFLAGS+= -Werror
 
 # Ddefaul FLAGS for linking

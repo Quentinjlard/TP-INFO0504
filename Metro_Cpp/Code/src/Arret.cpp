@@ -23,6 +23,14 @@ Arret::Arret(string id, string nom, string adresse, string x, string y)
     this->nom = nom;
     this->adresse = adresse;
 }
+
+void Arret::destructArret()
+{
+    for(int i = 0; i < (int)lignesArret.size(); i++)
+        delete lignesArret[i];
+}
+
+
 void Arret::setLignesArret(Ligne* ligne){
     this->lignesArret.push_back(ligne);
 }
@@ -52,7 +60,7 @@ bool Arret::memeLigne (Arret* arret){
 // Mais cet arrêt peut en fait ne pas appartenir à cette liste d'arrêts.
 int getIndArret(vector<Arret*> liste_arrets, Arret* arret){
     int i;
-    for(i = 0; i < (int)liste_arrets.size(); ++i){
+    for(i=0; i < (int)liste_arrets.size(); ++i){
         if(arret->getNom() == liste_arrets[i]->getNom())
             break;
     }

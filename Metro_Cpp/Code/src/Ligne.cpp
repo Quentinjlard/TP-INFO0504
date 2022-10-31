@@ -29,9 +29,10 @@ Ligne::Ligne(string idLigne, string numero_ligne, string nom_trajet, string coul
 
 }
 
-Ligne::~Ligne()
+void Ligne::destructLigne()
 {
-    delete this;
+    for(int i = 0; i < (int)arretsLigne.size(); i++)
+        delete arretsLigne[i];
 }
 
 void Ligne::setArretsLigne(Arret* arret){

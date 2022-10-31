@@ -1,25 +1,25 @@
 #include "Edge.h"
 
 Edge::Edge(Node* node1, Node* node2, int distanceCourtChemin, int distanceMinChangement)
+        : node1(node1), node2(node2), distanceCourtChemin(distanceCourtChemin), distanceMinChangement(distanceMinChangement)
 {
-    this->node1 = node1;
-    this->node2 = node2;
-    this->distanceCourtChemin = distanceCourtChemin;
-    this->distanceMinChangement = distanceMinChangement;
+
 }
 
 Edge::Edge()
-{
-    node1 = NULL;
-    node2 = NULL;
-    this->distanceCourtChemin = 0;
-    this->distanceMinChangement = 0;
-}
+        : distanceCourtChemin(0), distanceMinChangement(0)
+    {
+        // Node* n1;
+        node1 = NULL;
+        // Node* n2;
+        node2 = NULL;
+    }
 
 Edge::~Edge()
 {
-    delete this;
+    //dtor
 }
+
 
 int Edge::getDistance(bool min_itineraire){
     if(min_itineraire){

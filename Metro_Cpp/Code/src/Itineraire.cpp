@@ -19,7 +19,8 @@ Itineraire::Itineraire(Node* destination, Metro metro)
 
 Itineraire::~Itineraire()
 {
-    // delete this;
+    // for(int i = 0; i < (int)arretsItineraire.size(); i++)
+    //     delete arretsItineraire[i];
 }
 
 int Itineraire::getTempsTotal(){

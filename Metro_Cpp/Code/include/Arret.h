@@ -11,6 +11,7 @@ class Arret
     public:
         Arret(int id, string nom, string adresse, float x, float y); //constructeur
         Arret(string id, string nom, string adresse, string x, string y); //constructeur
+        void destructArret();
         int getIdArret(); //récupère idArret
         vector<Ligne*> getLignesArret(); // récupère lignesArret
         string getNom(); //récupère nom

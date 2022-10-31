@@ -27,7 +27,7 @@ IHM::IHM(bool activerCouleur)
 
 IHM::~IHM()
 {
-    delete this;
+    //dtor
 }
 
 bool trier_arrets_alphabet(Arret* arret1, Arret* arret2) {
@@ -141,7 +141,7 @@ vector<string> IHM::choixDepartArrivee(Metro metro)
             cin>>menu_arret_depart;
         }
 
-        while((!(menu_arret_depart >=0) & (menu_arret_depart <  (int)arrets_entree_libelles.size()))){
+        while((!(menu_arret_depart >=0) &( menu_arret_depart <  (int)arrets_entree_libelles.size()))){
             cout << "Choix incorrect, veuillez essayer de nouveau :" << endl;
             cin>>menu_arret_depart;
         }
@@ -224,7 +224,7 @@ void conversion_secondes(int n)
 	if ((h == 0) & (m != 0)){
 		printf("%.0f min", m);
 	}
-	if ((h != 0) & (m != 0)){
+	if ((h != 0) &( m != 0)){
 		printf("%.0f", m);
 	}
 

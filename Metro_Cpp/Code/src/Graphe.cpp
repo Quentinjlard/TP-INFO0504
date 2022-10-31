@@ -17,6 +17,15 @@ Graphe::Graphe(string wd)
     importerEdges(wd + "/Data_projet/voisins.txt", wd + "/Data_projet/voisins_type.txt");
 }
 
+void Graphe::destructGraphe()
+{
+    for (int i=0; i<(int)nodes.size(); i++)
+        delete nodes[i];
+
+    for(int i = 0; i < (int)edges.size(); i++)
+        delete edges[i];
+    
+}
 
 Node* Graphe::extractSmallest(vector<Node*>& nodes, bool min_itineraire)
 {

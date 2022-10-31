@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cstdio>
 #include "Metro.h"
 #include "IHM.h"
 #include "Graphe.h"
@@ -43,5 +44,10 @@ int main()
         menu.afficherItineraire(itineraire_sortie);
     }
 
+    printf("\n  => METRO liberer \n");
+    metro.destructMetro();
+    printf("\n  => GRAPHE liberer \n");
+    graphe.destructGraphe();
+    printf("\n  => Fini \n");
     return 0;
 }
